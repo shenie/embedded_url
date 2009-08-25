@@ -19,11 +19,17 @@ module EmbeddedURL
       @@shared_secret = secret
     end
     
-    def self.embedded(url)
-      now = Time.now.to_i.to_s
-      hashed = Digest::SHA1.hexdigest("#{@@shared_secret}#{now}")
-      result = get('/get_slideshow', :query => {:ts => now, :hash => hashed, :slideshow_url => url})
-      result['Slideshow']['Embed']
+    def initialize(url)
+      @url = url
+    end
+    
+    def to_embedded
+      if @url =~ /slideshare\.com/
+        now = Time.now.to_i.to_s
+        hashed = Digest::SHA1.hexdigest("#{@@shared_secret}#{now}")
+        result = SlideShare.get('/get_slideshow', :query => {:ts => now, :hash => hashed, :slideshow_url => @url})
+        result['Slideshow']['Embed']
+      end
     end
     
   end

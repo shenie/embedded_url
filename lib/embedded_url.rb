@@ -23,7 +23,8 @@ module EmbeddedURL
           Gist.new(link).to_embedded || 
             Youtube.new(link).to_embedded || 
             Vimeo.new(link).to_embedded || 
-            SlideShare.new(link).to_embedded
+            SlideShare.new(link).to_embedded ||
+            (link =~ /^http/ ? link : "http://#{link}")
         rescue
         end
         
