@@ -8,7 +8,7 @@ SlideShare configuration
     end
 
 SlideShare usage example
-      EmbeddedURL::SlideShare.embedded('http://www.slideshare.net/MackCollier/what-rockstars-can-teach-you-about-kicking-ass-with-social-media')
+      EmbeddedURL::SlideShare.new('http://www.slideshare.net/MackCollier/what-rockstars-can-teach-you-about-kicking-ass-with-social-media').to_embedded
 
 
 == Note on Patches/Pull Requests
