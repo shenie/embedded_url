@@ -1,6 +1,15 @@
 = embedded_url
 
-Description goes here.
+SlideShare configuration
+
+    EmbeddedURL::SlideShare.configure do |config|
+      config.api_key = 'api'
+      config.shared_secret = 'secret'
+    end
+
+SlideShare usage example
+      EmbeddedURL::SlideShare.embedded('http://www.slideshare.net/MackCollier/what-rockstars-can-teach-you-about-kicking-ass-with-social-media')
+
 
 == Note on Patches/Pull Requests
  
