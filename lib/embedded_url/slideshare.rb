@@ -24,7 +24,7 @@ module EmbeddedURL
     end
     
     def to_embedded
-      if @url =~ /slideshare\.com/
+      if @url =~ /slideshare\.net/
         now = Time.now.to_i.to_s
         hashed = Digest::SHA1.hexdigest("#{@@shared_secret}#{now}")
         result = SlideShare.get('/get_slideshow', :query => {:ts => now, :hash => hashed, :slideshow_url => @url})

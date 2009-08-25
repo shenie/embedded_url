@@ -1,15 +1,33 @@
 = embedded_url
 
-SlideShare configuration
+For ActiveRecord, you can specify attribute to be embedded like the following.
+
+    class Post < ActiveRecord::Base
+      with_embedded :link
+    end
+
+Then you can get the embedded URL like
+
+    @post.embedded_link
+    
+If Embedded URL does not recognize the link then it will return the original value with 'http://' prefixed (if it is not already).
+
+SlideShare configuration (apply at http://slideshare.net)
 
     EmbeddedURL::SlideShare.configure do |config|
       config.api_key = 'api'
       config.shared_secret = 'secret'
     end
 
-SlideShare usage example
-      EmbeddedURL::SlideShare.new('http://www.slideshare.net/MackCollier/what-rockstars-can-teach-you-about-kicking-ass-with-social-media').to_embedded
+Usage examples
 
+    include EmbeddedURL
+    
+    Gist.new('http://gist.github.com/173149').to_embedded
+    Youtube.new('http://www.youtube.com/watch?v=bZvSD1O86M8').to_embedded
+    Vimeo.new('http://vimeo.com/2927154').to_embedded
+    SlideShare.new('http://www.slideshare.net/MackCollier/what-rockstars-can-teach-you-about-kicking-ass-with-social-media').to_embedded
+    
 
 == Note on Patches/Pull Requests
  
