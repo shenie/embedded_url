@@ -5,8 +5,8 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "embedded_url"
-    gem.summary = %Q{TODO: one-line summary of your gem}
-    gem.description = %Q{TODO: longer description of your gem}
+    gem.summary = %Q{Convert url into embedded markup to display on web pages}
+    gem.description = %Q{Give you embedded markup for youtube, gist and etc}
     gem.email = "andy@shenie.info"
     gem.homepage = "http://github.com/shenie/embedded_url"
     gem.authors = ["Andy Shen"]
