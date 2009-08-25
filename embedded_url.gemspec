@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{embedded_url}
-  s.version = "0.0.1"
+  s.version = "0.0.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Andy Shen"]
@@ -24,11 +24,13 @@ Gem::Specification.new do |s|
      "Rakefile",
      "VERSION",
      "embedded_url.gemspec",
+     "init.rb",
      "lib/embedded_url.rb",
      "lib/embedded_url/gist.rb",
      "lib/embedded_url/slideshare.rb",
      "lib/embedded_url/vimeo.rb",
      "lib/embedded_url/youtube.rb",
+     "rails/init.rb",
      "test/embedded_url_test.rb",
      "test/test_helper.rb"
   ]
