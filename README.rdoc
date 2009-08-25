@@ -29,6 +29,13 @@ Usage examples
     SlideShare.new('http://www.slideshare.net/MackCollier/what-rockstars-can-teach-you-about-kicking-ass-with-social-media').to_embedded
     
 
+== Future Plan
+
+Support these
+
+* http://ustream.tv
+* http://screenr.com
+
 == Note on Patches/Pull Requests
  
 * Fork the project.
