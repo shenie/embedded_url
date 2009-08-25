@@ -35,6 +35,7 @@ Support these
 
 * http://ustream.tv
 * http://screenr.com
+* http://flickr.com
 
 == Note on Patches/Pull Requests
  
