@@ -36,6 +36,7 @@ Support these
 * http://ustream.tv
 * http://screenr.com
 * http://flickr.com
+* Pass option of height and width to to_embedded
 
 == Note on Patches/Pull Requests
  
