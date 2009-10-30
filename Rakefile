@@ -13,8 +13,10 @@ begin
     gem.add_development_dependency "thoughtbot-shoulda"
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
     gem.add_dependency('httparty', '>= 0.4.3')
-    
   end
+
+  Jeweler::GemcutterTasks.new
+
 rescue LoadError
   puts "Jeweler (or a dependency) not available. Install it with: sudo gem install jeweler"
 end
